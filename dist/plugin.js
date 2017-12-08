@@ -91,7 +91,7 @@ var StackOutputPlugin = /** @class */ (function () {
     };
     StackOutputPlugin.prototype.process = function () {
         var _this = this;
-        Promise.resolve()
+        return Promise.resolve()
             .then(function () { return _this.validate(); }).then(function () { return _this.fetch(); }).then(function (res) { return _this.beautify(res); }).then(function (res) { return _this.handle(res); }).catch(function (err) { return _this.serverless.cli.log(util.format('Cannot process Stack Output: %s!', err.message)); });
     };
     return StackOutputPlugin;
